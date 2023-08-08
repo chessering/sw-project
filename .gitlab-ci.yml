@@ -46,6 +46,8 @@ deploy_eb:
     export AWS_DEFAULT_REGION=${AWS_REGION}
 
     echo -e "section_start:`date +%s`:start[collapsed=true]\r\e[0K Creating zip file" 
+    npm install -g n
+    n latest
     npm install --production=false
     CI=false npm run build
     mkdir -p deploy
