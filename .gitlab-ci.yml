@@ -15,7 +15,7 @@ variables:
 deploy_eb:
   stage: deploy
   image: node:latest
-
+ 
   allow_failure: false
 
   before_script:
