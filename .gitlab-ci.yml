@@ -25,7 +25,7 @@ deploy_eb:
     - echo "$SSH_KEY" >> ~/.ssh/SARO-KeyPair.pem
     - chmod 700 ~/.ssh/SARO-KeyPair.pem
 
-  script: |
+  script: | 
     echo "########################################################"
     echo "#####create elastic beanstalk application(version)######"
     echo "########################################################"
