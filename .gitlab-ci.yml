@@ -49,7 +49,7 @@ deploy_eb:
     echo -e "section_start:`date +%s`:start[collapsed=true]\r\e[0K Creating zip file" 
     sudo npm install -g n
     sudo n latest
-    sudo npm install --production=false
+    sudo npm install --production=false --legacy-peer-deps
     CI=false npm run build
     mkdir -p deploy
     cp -r build deploy/build
