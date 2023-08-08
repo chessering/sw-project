@@ -22,11 +22,11 @@ deploy_eb:
     ##
     ## AWS에서 발급받은 키페어를 .ssh밑에 저장해둔다
     ##
-    - echo "$SSH_KEY" >> ~/.ssh/SARO-KeyPair.pem
-    - chmod 700 ~/.ssh/SARO-KeyPair.pem
+    - echo "$SSH_KEY" >> ~/.ssh/srKey1.pem
+    - chmod 700 ~/.ssh/srKey1.pem
     - chmod 777 .
 
-  script: | 
+  script: |
     echo "########################################################"
     echo "#####create elastic beanstalk application(version)######"
     echo "########################################################"
