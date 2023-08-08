@@ -47,7 +47,7 @@ deploy_eb:
 
     echo -e "section_start:`date +%s`:start[collapsed=true]\r\e[0K Creating zip file" 
     npm install --production=false
-    npm run build
+    CI=false npm run build
     mkdir -p deploy
     cp -r build deploy/build
     cp package.json deploy/package.json
