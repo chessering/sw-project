@@ -8,7 +8,7 @@ function NavigateEnd() {
         <br />
         도착했습니다.
         <br />
-        안내를 종료합니다.
+        안내를 종료합니다!
       </h2>
     </div>
   );
