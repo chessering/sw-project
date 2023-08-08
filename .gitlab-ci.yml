@@ -24,7 +24,6 @@ deploy_eb:
     ##
     - echo "$SSH_KEY" >> ~/.ssh/srKey1.pem
     - chmod 700 ~/.ssh/srKey1.pem
-    - chmod 777 .
 
   script: |
     echo "########################################################"
