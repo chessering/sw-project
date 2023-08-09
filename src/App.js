@@ -19,7 +19,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Test/>}/>
+          <Route path="/health" element={<Test/>}/>
           <Route path="/InputStart" element={<InputText />} />
           <Route path="/StartCheck" element={<InputCheck />} />
           {/* <Route path= '/DestCheck' element = {<OutputCheck/>}/> */}
