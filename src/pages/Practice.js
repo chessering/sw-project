@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Test() {
+function Practice() {
     return(
         <div>
             good!
         </div>
     );
 }
+export default Practice;

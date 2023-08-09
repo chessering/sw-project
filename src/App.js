@@ -10,6 +10,7 @@ import ReNavigateCheck from "./pages/ReNavigateCheck";
 import ReNavigate from "./pages/ReNavigate";
 import SearchArea from "./pages/SearchArea";
 import Map from "./pages/Map";
+import Practice from "./pages/Practice";
 
 function App() {
   fetch(`http://localhost:3000/health/`).then((response) =>
@@ -19,7 +20,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/health" element={<Test/>}/>
+          <Route path="/health" element={<Practice/>}/>
           <Route path="/InputStart" element={<InputText />} />
           <Route path="/StartCheck" element={<InputCheck />} />
           {/* <Route path= '/DestCheck' element = {<OutputCheck/>}/> */}
