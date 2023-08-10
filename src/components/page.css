@@ -9,11 +9,45 @@
 
 .InputPage {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     width: 300px;
-    margin:auto;
-    margin-top: 10%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.CheckPage {
+    display: flex;
+    align-items: center;
+    width: 390px;
+    margin: 0 auto;
     text-align: center;
     margin-top: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    color: #000518;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.EndPage {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    margin: auto;
+    text-align: center;
     align-items: center;
+    justify-content: center;
+    position: relative;
+
+    color: #000518;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }

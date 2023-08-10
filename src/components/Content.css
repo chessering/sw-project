@@ -1,0 +1,49 @@
+.Content {
+  flex-wrap: wrap;
+  align-content: stretch;
+  width: 300px;
+  text-align: center;
+  margin-top: 40px;
+  flex-shrink: 0;
+
+  border-radius: 23px;
+  background: #fff;
+  box-shadow: 10px -1px 10px 1px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+}
+.Content .Information {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.Content .ListenAgainBtn {
+  background: #000;
+  border-radius: 10px;
+}
+
+.Content .PauseBtn {
+  background: #000;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.Content .ObstacleReportBtn {
+  background: #000;
+  border-radius: 10px;
+}
+
+.Content .ExplainBtnText {
+  font-size: 14px;
+}
+.Content .ExplainBtnText .ListenAgain {
+  margin-left: 6px;
+  margin-right: 5px;
+}
+.Content .ExplainBtnText .Pause {
+  margin-left: 24px;
+  margin-right: 24px;
+}

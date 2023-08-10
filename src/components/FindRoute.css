@@ -1,0 +1,43 @@
+.FindRoute {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .FindRoute .FindRouteBtn {
+    width: 314px;
+    height: 435px;
+    flex-shrink: 0;
+    border-radius: 23px;
+    border-color: #e1ff68;
+    background: #e1ff68;
+    box-shadow: 5px 7px 20px 1px rgba(0, 0, 0, 0.25);
+  
+    color: #000518;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .FindRoute .BlockReportBtn {
+    width: 314px;
+    height: 199px;
+    flex-shrink: 0;
+    border-radius: 23px;
+    border-color: #e1ff68;
+    background: #e1ff68;
+    box-shadow: 5px 7px 20px 1px rgba(0, 0, 0, 0.25);
+  
+    color: #000518;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
