@@ -1,9 +1,24 @@
 import React, { useState, useEffect } from "react";
+import styled from 'styled-components';
 import $ from 'jquery';
 window.$ = $;
 /*global Tmapv2 */
 
+const StyledInput = styled.input`
+    border: none;
+    border-radius: 23px;
+    background: #E1FF68;
+    line-height: 5;
+    outline: none;
+    text-indent: 1em;
+    color: rgba(0, 5, 24, 0.30);
 
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+`
 
 function TmapComponent() {
   const [map, setMap] = useState(null);
@@ -82,7 +97,7 @@ function TmapComponent() {
 						map:map
 				 	});
 					
-					innerHtml += "<li><img src='http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_" + k + ".png' style={{vertical-align:middle;}}/><span>"+name+"</span></li>";
+					innerHtml += "<li><img src='http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_" + k + ".png' style={{verticalAlign:middle;}}/><span>"+name+"</span></li>";
 					
 					markerArr.push(marker);
 					positionBounds.extend(markerPosition);	// LatLngBounds의 객체 확장
@@ -102,13 +117,14 @@ function TmapComponent() {
 
   return (
     <div className="basePage">
-        <input
+        <StyledInput
         type="text"
         className="text_custom"
         id="searchKeyword"
         name="searchKeyword"
         value={searchKeyword}
         onChange={(e) => setSearchKeyword(e.target.value)}
+        style={{}}
         />
         <button id="btn_select" onClick={handleSearchClick}>
             검색
