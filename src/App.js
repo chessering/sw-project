@@ -18,9 +18,6 @@ import Practice from "./pages/Practice";
 import Report from "./pages/Report";
 
 function App() {
-  fetch(`http://localhost:3000/health/`).then((response) =>
-    console.log(response)
-  );
   return (
     <div>
       <BrowserRouter>

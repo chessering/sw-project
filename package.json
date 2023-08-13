@@ -14,7 +14,8 @@
     "react-scripts": "5.0.1",
     "react-speech-kit": "^3.0.1",
     "styled-components": "^6.0.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "serve": "^14.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
