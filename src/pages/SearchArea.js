@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
 import $ from 'jquery';
 window.$ = $;
@@ -11,6 +12,7 @@ const StyledInput = styled.input`
     line-height: 5;
     outline: none;
     text-indent: 1em;
+    margin-left: 5%;
     color: rgba(0, 5, 24, 0.30);
 
     font-family: Inter;
@@ -20,10 +22,11 @@ const StyledInput = styled.input`
     line-height: normal;
 `
 
-function TmapComponent() {
+function SearchArea() {
   const [map, setMap] = useState(null);
   const [markerArr, setMarkerArr] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     initTmap();
@@ -33,11 +36,6 @@ function TmapComponent() {
     setMap(
       new Tmapv2.Map("map_div", {
         center: new Tmapv2.LatLng(37.5652045, 126.98702028),
-        width: "70%",
-        height: "400px",
-        zoom: 17,
-        zoomControl: true,
-        scrollwheel: true,
       })
     );
   };
@@ -91,13 +89,13 @@ function TmapComponent() {
 					var marker = new Tmapv2.Marker({
 				 		position : markerPosition,
 				 		//icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_a.png",
-				 		icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_" + k + ".png",
-						iconSize : new Tmapv2.Size(24, 38),
+				 		// icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_" + k + ".png",
+						// iconSize : new Tmapv2.Size(24, 38),
 						title : name,
 						map:map
 				 	});
 					
-					innerHtml += "<li><img src='http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_" + k + ".png' style={{verticalAlign:middle;}}/><span>"+name+"</span></li>";
+					innerHtml += "<li><span style=margin:'30px'>"+name+"</span></li>";
 					
 					markerArr.push(marker);
 					positionBounds.extend(markerPosition);	// LatLngBounds의 객체 확장
@@ -116,7 +114,7 @@ function TmapComponent() {
 }
 
   return (
-    <div className="basePage">
+    <div className="basePage" style={{marginLeft:"10%", marginTop:"20%"}}>
         <StyledInput
         type="text"
         className="text_custom"
@@ -124,7 +122,6 @@ function TmapComponent() {
         name="searchKeyword"
         value={searchKeyword}
         onChange={(e) => setSearchKeyword(e.target.value)}
-        style={{}}
         />
         <button id="btn_select" onClick={handleSearchClick}>
             검색
@@ -133,10 +130,8 @@ function TmapComponent() {
 
       <div>
         {/* 검색 결과 영역 */}
-        <div style={{ width: "30%", float: "left" }}>
-          <div><strong>Search</strong>Results</div>
-          <ul id="searchResult" name="searchResult">
-            <li>검색결과</li>
+        <div style={{ width: "100%", float: "left"}}>
+          <ul id="searchResult" name="searchResult" onClick={() => navigate("/StartCheck")}>
           </ul>
         </div>
 
@@ -149,4 +144,4 @@ function TmapComponent() {
   );
 }
 
-export default TmapComponent;
+export default SearchArea;

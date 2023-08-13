@@ -15,7 +15,7 @@ import SearchArea from "./pages/SearchArea";
 import Map from "./pages/Map";
 import Photo from "./pages/Photo";
 import Practice from "./pages/Practice";
-import TmapComponent from "./pages/SearchArea";
+import Report from "./pages/Report";
 
 function App() {
   fetch(`http://localhost:3000/health/`).then((response) =>
@@ -39,7 +39,8 @@ function App() {
           <Route path="/ReNavigateCheck" element={<ReNavigateCheck />} />
           <Route path="/Map" element={<Map />} />
           <Route path='/Photo' element={<Photo />}/>
-          <Route path='/SearchArea' element={<TmapComponent />}/>
+          <Route path='/SearchArea' element={<SearchArea />}/>
+          <Route path='/Report' element={<Report/>}/>
         </Routes>
       </BrowserRouter>
     </div>
