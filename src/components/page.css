@@ -1,15 +1,45 @@
 .basepage {
     display: flex;
     flex-direction: column;
+    background-color: #09182E;
     width: 300px;
     margin: auto;
     text-align: center;
     margin-top: 100px;
 }
 
+@font-face {
+    font-family: 'EliceDigitalBaeum-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  
+
+.startPage {
+    display: flex;
+    flex-direction: column;
+    background: #09182E;
+    width: 390px;
+    height: 844px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+
+    color: #65FCDE;
+    text-align: center;
+    font-family: EliceDigitalBaeumOTF;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .InputPage {
     display: flex;
     align-items: center;
+    background: #09182E;
     width: 300px;
     margin: auto;
     text-align: center;
@@ -20,6 +50,7 @@
 .CheckPage {
     display: flex;
     align-items: center;
+    background: #09182E;
     width: 390px;
     margin: 0 auto;
     text-align: center;
@@ -37,6 +68,7 @@
 .EndPage {
     display: flex;
     flex-direction: column;
+    background: #09182E;
     width: 390px;
     margin: auto;
     text-align: center;

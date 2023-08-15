@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'EliceDigitalBaeumBold';
+  src: local('./asset/EliceDigitalBaeum_Bold.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -8,6 +13,6 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: EliceDigitalBaeumBold, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
