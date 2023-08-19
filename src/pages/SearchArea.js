@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
 import $ from 'jquery';
+import InputCheck from "./InputCheck";
 window.$ = $;
 /*global Tmapv2 */
 
@@ -22,11 +23,25 @@ const StyledInput = styled.input`
     line-height: normal;
 `
 
-function SearchArea() {
+function SearchArea(props) {
+  // const {onCopy} = props;
   const [map, setMap] = useState(null);
   const [markerArr, setMarkerArr] = useState([]);
-  const [searchKeyword, setSearchKeyword] = useState("");
   const navigate = useNavigate();
+  const [searchKeyword, setSearchKeyword] = useState("");
+  // const [inputData, setInputData] = useState({
+  //   searchKeyword: ''
+  // });
+
+
+  // const onSubmit = () => {
+  //   const _inputData = {
+  //     searchKeyword: {searchKeyword}
+  //   }
+  //   onCopy(_inputData);
+  //   navigate('/StartCheck');
+  //   setSearchKeyword('');
+  // }
 
   useEffect(() => {
     initTmap();
@@ -126,12 +141,13 @@ function SearchArea() {
         <button id="btn_select" onClick={handleSearchClick}>
             검색
         </button>
+        <InputCheck searchkeyword={searchKeyword}/>
 
 
       <div>
         {/* 검색 결과 영역 */}
         <div style={{ width: "100%", float: "left"}}>
-          <ul id="searchResult" name="searchResult" onClick={() => navigate("/StartCheck")}>
+          <ul id="searchResult" name="searchResult" onClick={() => navigate('/InputCheck')}>
           </ul>
         </div>
 

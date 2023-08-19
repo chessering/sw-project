@@ -1,11 +1,11 @@
-import "../components/button.js";
-import "./StartInput.js";
-import "./S_InputStartPage.js";
+import "../components/button.css";
+import SearchArea from "./SearchArea.js";
 import "../components/page.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
 
 
-function InputCheck() {
+function InputCheck(props) {
 
     const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ function InputCheck() {
                         textIndent: '1em',
                         display:"flex",
                         alignItems: "center",
-                    }}>경희대학교 국제캠퍼스</div>
+                    }}>{props.searchkeyword}</div>
                 </div>
             </div>
 

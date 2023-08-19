@@ -4,7 +4,7 @@ import FindRoute from "./pages/FindRoute";
 import ChooseVehicle from "./pages/ChooseVehicle";
 import ChooseInput from "./pages/ChooseInput";
 import InputText from "./pages/StartInput";
-import InputCheck from "./pages/StartCheck";
+import InputCheck from "./pages/InputCheck";
 import OutputText from "./pages/DestInput";
 import OutputCheck from "./pages/DestCheck";
 import OptimalWalk from "./pages/OptimalWalk";
@@ -37,7 +37,7 @@ function App() {
           <Route path="/ChooseVehicle" element={<ChooseVehicle/>}/>
           <Route path="/ChooseInput" element={<ChooseInput/>}/>
           <Route path="/StartInput" element={<InputText />} />
-          <Route path="/StartCheck" element={<InputCheck />} />
+          <Route path="/InputCheck" element={<InputCheck />} />
           <Route path="/DestInput" element={<OutputText />} />
           <Route path= '/DestCheck' element = {<OutputCheck/>}/>
           <Route path= '/OptimalWalk' element = {<OptimalWalk/>}/>

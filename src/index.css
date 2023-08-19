@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'EliceDigitalBaeumBold';
-  src: local('./asset/EliceDigitalBaeum_Bold.ttf') format('truetype');
-}
+
 
 body {
   margin: 0;
