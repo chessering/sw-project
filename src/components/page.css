@@ -2,10 +2,18 @@
     display: flex;
     flex-direction: column;
     background-color: #09182E;
-    width: 300px;
+    width: 390px;
+    height: 844px;
     margin: auto;
     text-align: center;
-    margin-top: 100px;
+
+    color: #FFF;
+    text-align: center;
+    font-family: GmarketSansMedium;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 @font-face {
@@ -15,6 +23,12 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
   
 
 .startPage {
@@ -65,6 +79,27 @@
     font-weight: 600;
     line-height: normal;
 }
+
+.LoadingPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #09182E;
+    width: 390px;
+    height: 844px;
+    gap : 50px;
+    margin: auto;
+
+    color: #FFF;
+    text-align: center;
+    font-family: GmarketSansMedium;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 .EndPage {
     display: flex;
     flex-direction: column;

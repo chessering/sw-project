@@ -1,23 +1,26 @@
 .ChooseInput {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 390px;
+    padding: 90px 38px;
     margin: auto;
     text-align: center;
-    margin-top: 100px;
+    gap: 30px;
+    background: #09182E;
   }
   
   .ChooseInput .StartPointBtn {
     width: 314px;
-    height: 317px;
+    height: 294px;
     flex-shrink: 0;
     border-radius: 23px;
-    border-color: #e1ff68;
-    background: #e1ff68;
+    border-color: #FFEDAC;
+    background: #FFEDAC;
     box-shadow: 5px 7px 20px 1px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(5px 7px 20px rgba(0, 0, 0, 0.25));
   
-    color: #000518;
-    font-family: Inter;
+    color: #172A46;
+    font-family: GmarketSansMedium;
     font-size: 35px;
     font-style: normal;
     font-weight: 600;
@@ -26,15 +29,15 @@
   
   .ChooseInput .DestinationBtn {
     width: 314px;
-    height: 317px;
+    height: 294px;
     flex-shrink: 0;
     border-radius: 23px;
-    border-color: #e1ff68;
-    background: #e1ff68;
-    box-shadow: 5px 7px 20px 1px rgba(0, 0, 0, 0.25);
+    border-color: #ACFFFA;
+    background: #ACFFFA;
+    box-shadow: 5px 7px 20px 1px rgba(0, 0, 0, 0.25) inset;
   
-    color: #000518;
-    font-family: Inter;
+    color: #172A46;
+    font-family: GmarketSansMedium;
     font-size: 35px;
     font-style: normal;
     font-weight: 600;
