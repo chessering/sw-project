@@ -23,7 +23,7 @@ const StyledInput = styled.input`
     line-height: normal;
 `
 
-function SearchArea(props) {
+function SearchArea() {
   // const {onCopy} = props;
   const [map, setMap] = useState(null);
   const [markerArr, setMarkerArr] = useState([]);
@@ -32,7 +32,7 @@ function SearchArea(props) {
   // const [inputData, setInputData] = useState({
   //   searchKeyword: ''
   // });
-
+  const list = [];
 
   // const onSubmit = () => {
   //   const _inputData = {
@@ -92,6 +92,9 @@ function SearchArea(props) {
 					var noorLat = Number(resultpoisData[k].noorLat);
 					var noorLon = Number(resultpoisData[k].noorLon);
 					var name = resultpoisData[k].name;
+          for (var p in resultpoisData[k].newAddressList.newAddress) {
+            var address = resultpoisData[k].newAddressList.newAddress[p].fullAddressRoad;
+          }
 					
 					var pointCng = new Tmapv2.Point(noorLon, noorLat);
 					var projectionCng = new Tmapv2.Projection.convertEPSG3857ToWGS84GEO(pointCng);
@@ -106,15 +109,16 @@ function SearchArea(props) {
 				 		//icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_a.png",
 				 		// icon : "http://tmapapi.sktelecom.com/upload/tmap/marker/pin_b_m_" + k + ".png",
 						// iconSize : new Tmapv2.Size(24, 38),
+            fulladdress : address,
 						title : name,
 						map:map
 				 	});
-					
-					innerHtml += "<li><span style=margin:'30px'>"+name+"</span></li>";
-					
+					innerHtml += "<li><span style={{margin:'30px', fontSize:'35px'}}>"+name+"</span></li>";
+          innerHtml += "<li><span style={{margin:'30px', fontSize:'25px'}}>"+address+"</span></li>"
 					markerArr.push(marker);
 					positionBounds.extend(markerPosition);	// LatLngBounds의 객체 확장
 				}
+
 				
 				$("#searchResult").html(innerHtml);	//searchResult 결과값 노출
 				map.panToBounds(positionBounds);	// 확장된 bounds의 중심으로 이동시키기
@@ -141,7 +145,6 @@ function SearchArea(props) {
         <button id="btn_select" onClick={handleSearchClick}>
             검색
         </button>
-        <InputCheck searchkeyword={searchKeyword}/>
 
 
       <div>
