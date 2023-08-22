@@ -21,6 +21,8 @@ import Intro1 from "./pages/Intro1";
 import Intro2 from "./pages/Intro2";
 import Intro3 from "./pages/Intro3";
 import Intro4 from "./pages/Intro4";
+import TTS from "./pages/TTS";
+import RouteLoading from "./pages/RouteLoading";
 
 function App() {
   return (
@@ -48,6 +50,8 @@ function App() {
           <Route path='/Photo' element={<Photo />}/>
           <Route path='/SearchArea' element={<SearchArea />}/>
           <Route path='/Report' element={<Report/>}/>
+          <Route path='/TTS' element={<TTS/>}/>
+          <Route path='/RouteLoading' element={<RouteLoading/>}/>
         </Routes>
       </BrowserRouter>
     </div>
